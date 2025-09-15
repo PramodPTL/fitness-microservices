@@ -4,11 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22989ff0-e4f2-4343-baeb-1cabcbb4514d" name="Changes" comment="Initial commit" />
+    <list default="true" id="22989ff0-e4f2-4343-baeb-1cabcbb4514d" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userservice/src/main/java/com/fitness/userservice/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userservice/src/main/java/com/fitness/userservice/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userservice/src/main/java/com/fitness/userservice/dto/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userservice/src/main/java/com/fitness/userservice/dto/UserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userservice/src/main/java/com/fitness/userservice/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userservice/src/main/java/com/fitness/userservice/models/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userservice/src/main/java/com/fitness/userservice/services/UserServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/userservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/userservice/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -22,15 +44,27 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/PramodPTL/fitness-microservice.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/PramodPTL/fitness-microservices.git&quot;,
     &quot;accountId&quot;: &quot;c217f30b-295f-43bb-9bd7-41a44c8ae188&quot;
   }
 }</component>
+  <component name="HttpClientEndpointsTabState">
+    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;c2bc910b4ab16b15c1ee7c3174f9cd783751dbed&quot; value=&quot;###&amp;#10;POST http://localhost:8080/api/users/register&amp;#10;Content-Type: application/json&amp;#10;&amp;#10;{&amp;#10;  &amp;quot;firstName&amp;quot;: &amp;quot;pp&amp;quot;,&amp;#10;  &amp;quot;lastName&amp;quot;: &amp;quot;dd&amp;quot;,&amp;#10;  &amp;quot;email&amp;quot;: &amp;quot;dd&amp;quot;,&amp;#10;  &amp;quot;password&amp;quot;: &amp;quot;dd&amp;quot;&amp;#10;}&quot; /&gt;&#10;  &lt;entry key=&quot;7d3f1607a8371a8785e9120184c345614dad3ea2&quot; value=&quot;###&amp;#10;POST http://localhost:8080/api/users/register&amp;#10;Content-Type: application/json&amp;#10;&amp;#10;{&amp;#10;  &amp;quot;firstName&amp;quot;: &amp;quot;dd&amp;quot;,&amp;#10;  &amp;quot;lastName&amp;quot;: &amp;quot;dd&amp;quot;,&amp;#10;  &amp;quot;email&amp;quot;: &amp;quot;dd&amp;quot;,&amp;#10;  &amp;quot;password&amp;quot;: &amp;quot;dd&amp;quot;&amp;#10;}&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
+  </component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="AISelfReview" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="32ebEp1DAAgJZp5AdLx40ygX33l" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,10 +93,17 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.28134558&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.fitness.userservice.dto" />
+      <recent name="com.fitness.userservice.models" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="UserserviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="userservice" />
@@ -91,6 +132,10 @@
       <workItem from="1757783979220" duration="2760000" />
       <workItem from="1757787992639" duration="459000" />
       <workItem from="1757788476236" duration="204000" />
+      <workItem from="1757795637374" duration="5222000" />
+      <workItem from="1757843880663" duration="8775000" />
+      <workItem from="1757869899168" duration="2827000" />
+      <workItem from="1757943820260" duration="3681000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
