@@ -6,5 +6,9 @@
       <user-name>postgres</user-name>
       <schema-mapping />
     </data-source>
+    <data-source name="aiactivityfitness@localhost" uuid="2c75f368-0ce0-44f4-aa16-a17eb29ac162">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MONGO" />
+      <schema-mapping />
+    </data-source>
   </component>
 </project>
