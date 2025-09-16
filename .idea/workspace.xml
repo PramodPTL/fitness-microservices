@@ -4,15 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22989ff0-e4f2-4343-baeb-1cabcbb4514d" name="Changes" comment="User Service (Store user in Postgre and get by Id, define user)">
-      <change afterPath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/ActivityserviceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/model/Activity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/model/ActivityType.java" afterDir="false" />
+    <list default="true" id="22989ff0-e4f2-4343-baeb-1cabcbb4514d" name="Changes" comment="Initial Activity setup">
+      <change afterPath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/ActivityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/config/MongoConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/controller/ActivityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/dto/ActivityRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/dto/ActivityResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/service/ActivityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/ActivityserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/ActivityserviceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/userservice/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/userservice/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -51,6 +57,13 @@
   <component name="HttpClientOnboardingState">{
   &quot;isOnboardingCommentShown&quot;: true
 }</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -68,6 +81,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.EurekaApplication.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
@@ -77,10 +91,13 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\itspr\\AppData\\Roaming\\JetBrains\\IntelliJIdea2025.2\\plugins\\Shell Script\\shellcheck.exe&quot;,
     &quot;Spring Boot.ActivityserviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EurekaApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.UserserviceApplication.executor&quot;: &quot;Run&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/itspr/Desktop/fitness-microservice&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -88,16 +105,24 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3678161&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reactor&quot;,
     &quot;settings.editor.splitter.proportion&quot;: &quot;0.28134558&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="ReactorSettings">
+    <option name="debugInitializationType" value="AUTO" />
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.fitness.activityservice.dto" />
+      <recent name="com.fitness.activityservice.service.ActivityService" />
       <recent name="com.fitness.activityservice.model" />
       <recent name="com.fitness.userservice.dto" />
       <recent name="com.fitness.userservice.models" />
@@ -106,10 +131,17 @@
       <recent name="com.fitness.activityservice" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ActivityserviceApplication">
+  <component name="RunManager" selected="Spring Boot.EurekaApplication">
     <configuration name="ActivityserviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="activityservice" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.fitness.activityservice.ActivityserviceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fitness.eureka.EurekaApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -147,7 +179,13 @@
       <workItem from="1757943820260" duration="5648000" />
       <workItem from="1757956246251" duration="1098000" />
       <workItem from="1757957656685" duration="3733000" />
-      <workItem from="1757966240586" duration="33000" />
+      <workItem from="1757966240586" duration="2287000" />
+      <workItem from="1758003663163" duration="8674000" />
+      <workItem from="1758043328186" duration="1129000" />
+      <workItem from="1758044602316" duration="161000" />
+      <workItem from="1758045044646" duration="1721000" />
+      <workItem from="1758047551308" duration="180000" />
+      <workItem from="1758047746032" duration="1378000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -173,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757952048462</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Initial Activity setup">
+      <option name="closed" value="true" />
+      <created>1757966378331</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1757966378332</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +239,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="User Service (Store user in Postgre and get by Id, define user)" />
-    <option name="LAST_COMMIT_MESSAGE" value="User Service (Store user in Postgre and get by Id, define user)" />
+    <MESSAGE value="Initial Activity setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Activity setup" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
